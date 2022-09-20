@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Swopnil Bista">
+    <title>Creative Sathi</title>
+
+    <!-- Favicons-->
+	<link rel="shortcut icon" href="{% static "favicon.png" %}">
+	<link rel="apple-touch-icon" href="{% static "apple-touch-icon.png" %}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{% static "apple-touch-icon-72x72.png" %}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{% static "apple-touch-icon-114x114.png" %}">
+
+
+    <!-- BASE CSS -->
+	
+	<link rel="stylesheet" href="{% static "css/layout.css" %}">
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+	<link href="{% static "css/vendors.css" %}" rel="stylesheet">
+	
+	<link rel="stylesheet" href="{% static "css/font-awesome.css" %}">
+	<link rel="stylesheet" href="{% static "css/retina.css" %}">
+	<link rel="stylesheet" href="{% static "css/owl.carousel.css" %}">
+
+
+    <!-- YOUR CUSTOM CSS -->
+
+</head>
+
+<body>
+	
+	<div id="cd-nav" class="cd-nav">
+		<div class="cd-navigation-wrapper">
+			<div class="cd-half-block">
+				<nav>
+					<ul class="cd-primary-nav">
+						<li class="cd-label"><a href="homepage/" class="selected">Home</a>
+
+						</li>
+						<li><a href="about-us/">About Us</a></li>
+						<li><a href="work/">Projects</a></li>
+						<li><a href="contact/">Contact</a></li>
+	
+					</ul>
+				</nav>
+			</div><!-- .cd-half-block -->
+			
+			<div class="cd-half-block">
+				<address>
+					<ul class="cd-contact-info">
+						<li><a href="mailto:swopnilbista2003@gmail.com">swopnilbista2003@gmail.com</a></li>
+						<li>9804008243</li>
+						<li>
+							<span>Old Baneshwor</span>
+							<span>Near Thames College</span>
+							<span>Kathmandu, Nepal</span>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/creativesathi" class="tipped" data-title="facebook"  data-tipper-options='{"direction":"top","follow":"true","margin":30}'><span class="nav-social">&#xf099;</span></a>
+							<a href="https://www.instagram.com/creative.sathi/" class="tipped" data-title="instagram"  data-tipper-options='{"direction":"top","follow":"true","margin":30}'><span class="nav-social">&#xf09b;</span></a>
+							<a href="https://www.linkedin.com/company/creativesathi/" class="tipped" data-title="linkeden"  data-tipper-options='{"direction":"top","follow":"true","margin":30}'><span class="nav-social">&#xf08c;</span></a>
+						</li>
+					</ul>
+				</address>
+			</div> <!-- .cd-half-block -->
+		</div> <!-- .cd-navigation-wrapper -->
+	</div>
+	
+<main>
+	    <div class="cd-header">
+	
+			<a href="#cd-nav" class="cd-nav-trigger">Menu 
+				<span class="cd-nav-icon"></span>
+	
+				<svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+					<circle fill="transparent" stroke="#000000" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+				</svg>
+			</a>
+		
+			<div class="logo"><img src="{% static "images/logo.png" %}" alt=""></div>
+		
+		</div>
+
+		
+		<div id ="top-section">
+	    <div class="container-fluid d-flex flex-column my-auto">
+	        <div id="wizard_container">
+	            <div id="top-wizard">
+	                <div id="progressbar"></div>
+	            </div>
+	            <!-- /top-wizard -->
+	            <form id="wrapped" method="POST">
+					{% csrf_token %}
+	                <input id="website" name="website" type="text" value="">
+	                <!-- Leave input above for security protection, read docs for details -->
+
+	                <div id="middle-wizard">
+
+	                   <div class="step">
+						    <div class="question_title">
+						        <h3>Which Services are you Looking for ? </h3>
+						    </div>
+						    <div class="row justify-content-center">
+						        <div class="col-md-7">
+						        	   <div class="list_block">
+					                <ul>
+					                    <li>
+					                        <div class="checkbox_radio_container">
+					                            <input type="checkbox" id="question_1_opt_1" name="question_1[]" class="required" value="Content Creation" onclick="call()">
+					                            <label class="checkbox" for="question_1_opt_1"></label>
+					                            <label for="question_1_opt_1" class="wrapper">Content Creation</label>
+					                        </div>
+					                    </li>
+					                    <li>
+					                        <div class="checkbox_radio_container">
+					                            <input type="checkbox" id="question_1_opt_2" name="question_1[]" class="required" value="360 Digital Marketing" onclick="call()">
+					                            <label class="checkbox" for="question_1_opt_2"></label>
+					                            <label for="question_1_opt_2" class="wrapper">360 Digital Marketing</label>
+					                        </div>
+					                    </li>
+					                    <li>
+					                        <div class="checkbox_radio_container">
+					                            <input type="checkbox" id="question_1_opt_3" name="question_1[]" class="required" value="Mobile App" onclick="call()">
+					                            <label class="checkbox" for="question_1_opt_3"></label>
+					                            <label for="question_1_opt_3" class="wrapper">Mobile App</label>
+					                        </div>
+					                    </li>
+					                    <li>
+					                        <div class="checkbox_radio_container">
+					                            <input type="checkbox" id="question_1_opt_4" name="question_1[]" class="required" value="Web App" onclick="call()">
+					                            <label class="checkbox" for="question_1_opt_4"></label>
+					                            <label for="question_1_opt_4" class="wrapper">Web App</label>
+					                        </div>
+					                    </li>
+					                 
+					                </ul>
+									<input type="text" name="service" id = "service" style="display: block;">
+					                <small><em>Multiple selections *</em></small>
+					            </div>
+						        </div>
+						    </div>
+						    <!-- /row -->
+						</div>
+						<!-- /Step -->
+
+	                    <div class="step">
+	                    	 <div class="question_title">
+						        <h3>Please provide any additional information about the Project</h3>
+						    </div>
+						     <div class="row justify-content-center">
+						        <div class="col-md-10">
+						           <div class="mb-3 form-floating">
+						                <textarea name="additional_message" id="additional_message" class="form-control required" placeholder="Write here a short description"></textarea>
+						                <label for="additional_message">Write here a short description</label>
+						            </div>
+						        </div>
+						    </div>
+						    <!-- /row -->
+	                    </div>
+	                    <!-- /Step -->
+
+	                    <div class="step">
+	                    	 <div class="question_title">
+						        <h3>What's your budget?</h3>
+						    </div>
+						     <div class="row justify-content-center">
+						        <div class="col-md-10">
+						          <div class="form-floating mb-3">
+									<input type="text" name="budget" id="budget" class="form-control required" placeholder="Budget">
+					                <label for="budget">Budget</label>
+									</div>
+						        </div>
+						    </div>
+						    <!-- /row -->
+	                    </div>
+	                    <!-- /Step -->
+
+	                    <div class="submit step">
+					    <div class="question_title">
+					        <h3>Please fill with your details</h3>
+					        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+					    </div>
+					    <div class="row justify-content-center">
+					        <div class="col-md-7">
+					            <div class="mb-3 form-floating">
+					                <input type="text" name="firstname" id="firstname" class="form-control required" placeholder="First Name">
+					                <label for="firstname">First Name</label>
+					            </div>
+					            <div class="mb-3 form-floating">
+					                <input type="text" name="lastname" id="lastname" class="form-control required" placeholder="Last Name">
+					                <label for="lastname">Last Name</label>
+					            </div>
+					            <div class="mb-3 form-floating">
+					                <input type="email" name="email" id="email" class="form-control required" placeholder="Your Email">
+					                <label for="email">Your Email</label>
+					            </div>
+					            <div class="form-floating mb-4">
+					                <input type="text" name="telephone" id="telephone" class="form-control required" placeholder="Your Telephone">
+					                <label for="telephone">Your Phone</label>
+					            </div>
+					           
+					        </div>
+					    </div>
+					    <!-- /row -->
+					</div>
+					<!-- /Step -->
+					
+	                </div>
+	                <!-- /middle-wizard -->
+
+	                <div id="bottom-wizard">
+	                    <button type="button" name="backward" class="backward btn_1">Backward</button>
+	                    <button type="button" name="forward" class="forward btn_1">Forward</button>
+	                    <button type="submit" class="submit btn_1">Submit</button>
+	                </div>
+	                <!-- /bottom-wizard -->
+	            </form>
+	        </div>
+	        <!-- /Wizard container -->
+	    </div>
+	    <!-- /Container -->
+
+	</div>
+
+
+<script>
+	document.getElementById('service').value = "Rs.30,000";
+	function call(){
+		document.getElementById('service').value = "Rs.30,000";
+		var s1 = document.getElementById("question_1_opt_1");
+		var s2 = document.getElementById("question_1_opt_2");
+		var s3 = document.getElementById("question_1_opt_3");
+		var s4 = document.getElementById("question_1_opt_4");
+		
+		
+		
+	  
+		if (s1.checked == true && s2.checked == true && s3.checked == true && s4.checked ==true){
+		  document.getElementById('service').value = "Content Creation / 360 Digital Marketing / Mobile App / Web App";
+		}
+		else if (s1.checked == true && s2.checked == true && s3.checked == true){
+			document.getElementById('service').value = "Content Creation / 360 Digital Marketing / Mobile App";
+		}
+		else if (s1.checked == true && s2.checked == true && s4.checked == true){
+			document.getElementById('service').value = "Content Creation / 360 Digital Marketing / Web App";
+		}
+		else if (s4.checked == true && s2.checked == true && s3.checked == true){
+			document.getElementById('service').value = "360 Digital Marketing / Mobile App / Web App";
+		}
+		else if (s1.checked == true && s4.checked == true && s3.checked == true){
+			document.getElementById('service').value = "Content Creation / Mobile App / Web App";
+		}
+		else if (s1.checked == true && s2.checked == true){
+		  document.getElementById('service').value = "Content Creation / 360 Digital Marketing";
+		}
+		else if (s1.checked == true && s3.checked == true){
+		  document.getElementById('service').value = "Content Creation / Mobile App";
+		}
+		else if (s1.checked == true && s4.checked == true){
+			document.getElementById('service').value = "Content Creation / Web App";
+		  }
+		else if (s3.checked == true && s2.checked == true){
+		  document.getElementById('service').value = "360 Digital Marketing / Mobile App";
+		}
+		else if (s4.checked == true && s2.checked == true){
+			document.getElementById('service').value = "360 Digital Marketing / Web App";
+		}
+		else if (s4.checked == true && s3.checked == true){
+			document.getElementById('service').value = "Mobile App / Web App";
+		  }
+		else if (s1.checked == true){
+		  document.getElementById('service').value = "Content Creation";
+		}
+		else if (s2.checked == true){
+		  document.getElementById('service').value = "360 Digital Marketing";
+		}
+		else if (s3.checked == true){
+		  document.getElementById('service').value = "Mobile App";
+		}
+		else if (s4.checked == true){
+			document.getElementById('service').value = "Web App";
+		  }
+	  }
+</script>
+
+<script type="text/javascript" src="{% static "js/home5-custom.js" %}"></script>
+<!-- COMMON SCRIPTS -->
+<script src="{% static "js/common_scripts.min.js" %}"></script>
+<script src="{% static "js/common_functions.js" %}"></script>
+<script src="{% static "js/validate.js" %}"></script>
+
+
+<!-- COLOR SWITCHER  -->
+<script src="{% static "js/switcher.js" %}"></script>
+
+</body>
+
+</html>
